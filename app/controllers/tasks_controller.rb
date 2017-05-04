@@ -1,4 +1,5 @@
 class TasksController < ApplicationController
+# Afficher les tâches
   def index
     @tasks = Task.all
   end
@@ -7,6 +8,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+# Créer une tâche
   def new
     @task = Task.new
   end
@@ -16,6 +18,7 @@ class TasksController < ApplicationController
     @task.save
   end
 
+# Editer une tâche
   def edit
     @task = Task.find(params[:id])
   end
@@ -26,6 +29,7 @@ class TasksController < ApplicationController
     @task.save
   end
 
+# Sup une tâche
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
